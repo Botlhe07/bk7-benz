@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Iconic Models</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* General Page Styling */
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #222222;
+            padding: 20px;
+            border-bottom: 3px solid red;
+        }
+
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 10px;
+        }
+
+        /* Model Section */
+        .models {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .model {
+            background-color: #333333;
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        .model img {
+            width: 100%;
+            border-radius: 8px;
+            border: 3px solid red;
+        }
+
+        .model h2 {
+            color: red;
+        }
+
+        .specs {
+            background-color: #222222;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            padding: 15px;
+            margin-top: 20px;
+            border-top: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Images/Mercedes-Logo.svg.png" alt="Mercedes-Benz Logo" class="logo">
+        <h1>Mercedes-Benz Iconic Models</h1>
+        <nav>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="models.html">Iconic Models</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </header>
+    </header>
+
+    <section class="models">
+        <div class="model">
+            <img src="Images/M5.jpg" alt="Mercedes-Benz G-Wagon">
+            <h2>Mercedes-Benz G-Class</h2>
+            <p>This is the Mercedes-Benz G63</p>
+            <p>A true off-road luxury icon with unmatched durability and style.</p>
+            <div class="specs">
+                <p>Engine:V8 Biturbo</p>
+                <p>Horsepower:577 HP</p>
+                <p>Top Speed: 220 km/h</p>
+            </div>
+        </div>
+
+        <div class="model">
+            <img src="Images/M4.avif" alt="Mercedes-Benz C-Class">
+            <h2>Mercedes-Benz C-Class</h2>
+            <p>This is the Mercedes-Benz C63 S</p>
+            <p>A perfect blend of performance, luxury, and daily drivability.</p>
+            <div class="specs">
+                <p>Engine:2.0L Turbocharged</p>
+                <p>Horsepower:671 HP</p>
+                <p>Top Speed: 290 km/h</p>
+            </div>
+        </div>
+
+        <div class="model">
+            <img src="Images/M3.jpg" alt="Mercedes-Benz E-Class">
+            <h2>Mercedes-Benz E-Class</h2>
+            <p>This is the Mercedes-Benz E63 S</p>
+            <p>The Mercedes-AMG E63 is a high-performance sedan known for its powerful V8 engine, impressive acceleration, and luxurious features & cutting-edge technology.</p>
+            <div class="specs">
+                <p>Engine:4.0L V8 Biturbo</p>
+                <p>Horsepower:603 HP</p>
+                <p>Top Speed: 310 km/h</p>
+            </div>
+        </div>
+
+        <div class="model">
+            <img src="Images/M1.webp" alt="Mercedes-Benz S-Class">
+            <h2>Mercedes-Benz S-Class</h2>
+            <p>The Mercedes-AMG S 63 E Performance is a high-performance, plug-in hybrid sedan.</p>
+            <p>The S 63 E Performance offers a blend of luxury, performance, and sustainability, with a focus on a refined driving experience. </p>
+            <div class="specs">
+                <p>Engine:4.0L V8 Biturbo</p>
+                <p>Horsepower:791 HP</p>
+                <p>Top Speed: 250 km/h</p>
+            </div>
+        </div>
+
+        <div class="model">
+            <img src="Images/M2.jpg" alt="Mercedes-Benz X-Class">
+            <h2>Mercedes-Benz X-Class</h2>
+            <p>A refined pickup truck that blends power with Mercedes-Benz sophistication.</p>
+            <div class="specs">
+                <p>Engine:3.0L V6 Diesel</p>
+                <p>Horsepower:258 HP</p>
+                <p>Top Speed: 205 km/h</p>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
