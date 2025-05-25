@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Milestones</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Page Styling */
+         body {
+             background-color: #222222;
+             background: gray url('Images/Background 2.jpg') no-repeat center center fixed;
+             background-size: cover;
+             color: rgb(255, 255, 255);
+             font-family: Arial, sans-serif;
+             margin: 0;
+        }
+
+
+        header {
+            background-color: #222222;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid red;
+        }
+
+        .logo {
+            width: 60px;
+            height: auto;
+        }
+
+        h1 {
+            color: red;
+            margin-top: 10px;
+        }
+
+        /* Timeline Styling */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .milestone {
+            background-color: #333333;
+            padding: 15px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+            margin-bottom: 20px;
+            position: relative;
+            opacity: 0; /* Hidden initially for animation */
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .milestone h2 {
+            color: red;
+        }
+
+        .milestone::before {
+            content: "•";
+            color: red;
+            font-size: 30px;
+            position: absolute;
+            left: -15px;
+            top: 15px;
+        }
+
+        .milestone img {
+            width: 100%;
+            border-radius: 8px;
+            border: 3px solid red;
+            margin-top: 10px;
+        }
+
+        /* JavaScript-triggered animation */
+        .milestone.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            padding: 15px;
+            text-align: center;
+            margin-top: 20px;
+            border-top: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Images/Mercedes-Logo.svg.png" alt="Mercedes-Benz Logo" class="logo">
+        <h1>Mercedes-Benz Milestones</h1>
+        <nav>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="models.html">Iconic Models</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+        </nav>
+    </header>
+
+    <section class="timeline">
+        <div class="milestone">
+            <h2>1886 - The First Gasoline Car</h2>
+            <p>Karl Benz creates the Benz Patent-Motorwagen, pioneering modern automobiles.</p>
+            <img src="Images/mile 1.webp" alt="Benz Patent Motorwagen">
+        </div>
+
+        <div class="milestone">
+            <h2>1926 - Formation of Mercedes-Benz</h2>
+            <p>The merger of Benz & Cie and Daimler-Motoren-Gesellschaft officially forms their first branded car.</p>
+            <img src="Images/mile 2.jpg" alt="Early Mercedes-Benz Model">
+        </div>
+
+        <div class="milestone">
+            <h2>1954 - The 300SL Gullwing</h2>
+            <p>The Mercedes-Benz 300SL is introduced, featuring iconic gullwing doors.</p>
+            <img src="Images/mile 3.jpg" alt="Mercedes-Benz 300SL Gullwing">
+        </div>
+
+        <div class="milestone">
+            <h2>1971 - Anti-lock Braking System (ABS)</h2>
+            <p>Mercedes-Benz debuts ABS technology, revolutionizing vehicle safety introducing it as a feature in their S-Class models in 1978.</p>
+            <img src="Images/mile 4.jpg" alt="Mercedes-Benz with ABS">
+        </div>
+
+        <div class="milestone">
+            <h2>1998 - First Luxury SUV</h2>
+            <p>The Mercedes-Benz ML-Class becomes the brand’s first SUV model.</p>
+            <img src="Images/mile 5.webp" alt="Mercedes-Benz ML-Class">
+        </div>
+
+       <div class="milestone">
+            <h2>2019 - Entering the EV Market</h2>
+            <p>The Mercedes-Benz EQC launches, marking their commitment to electric vehicles.</p>
+            <img src="Images/mile 6.webp" alt="Mercedes-Benz EQC">
+        </div>
+
+        <div class="milestone">
+            <h2>2021 - The EQS Flagship Sedan</h2>
+            <p>The Mercedes-Benz EQS debuts as a fully electric luxury sedan.</p>
+            <img src="Images/mile 7.webp" alt="Mercedes-Benz EQS">
+        </div>
+    </section>
+    <script>
+        /* Smooth animation on scroll */
+        document.addEventListener("scroll", function() {
+            let milestones = document.querySelectorAll(".milestone");
+            milestones.forEach(milestone => {
+                let position = milestone.getBoundingClientRect().top;
+                if (position < window.innerHeight - 100) {
+                    milestone.classList.add("visible");
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

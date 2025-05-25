@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz | Event Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <img src="Images/Mercedes-Logo.svg.png" alt="Mercedes-Benz Logo" class="logo">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="models.html">Iconic Models</a></li>
+                <li><a href="milestones.html">Milestones</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+        </nav>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="registration">
+        <h1>Register for a Mercedes-Benz Event</h1>
+        <p>Fill out the form below to secure your spot!</p>
+
+        <form id="eventForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="event">Select Event:</label>
+            <select id="event" name="event">
+                <option value="auto-show">Mercedes-Benz Auto Show 2025</option>
+                <option value="formula1">Formula 1 Grand Prix – Mercedes AMG</option>
+                <option value="test-drive">Luxury Test Drive Event</option>
+            </select>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Register Now</button>
+        </form>
+    </secion>
+    <!-- JavaScript Form Validation -->
+    <script>
+        document.getElementById("eventForm").addEventListener("submit", function(event) {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            if (name === "" || email === "") {
+                alert("Please fill in all required fields.");
+                event.preventDefault(); // Prevent form submission
+            } else {
+                alert("Thank you for registering! We will send event details to your email.");
+            }
+        });
+    </script>
+</body>
+</html>
