@@ -56,50 +56,6 @@ h1 {
     color: red;
     margin: 0;
 }
-
-/* Hide the menu links by default */
-nav {
-    display: flex;
-    gap: 15px;background-color: #333333;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.menu-toggle {
-    display: none; /* Hidden on large screens */
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* When screen size is less than 768px */
-@media screen and (max-width: 768px) {
-    nav {
-        display: none; /* Hide navigation */
-        flex-direction: column;
-    }
-
-    .menu-toggle {
-        display: block; /* Show menu button */
-    }
-}
-
-nav li {
-    margin: 0 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
 nav a:hover {
     background-color: red;
 }
@@ -191,43 +147,6 @@ footer {
     border-top: 3px solid red;
     opacity: 0;
     animation: fadeUp 1s ease-in-out 0.9s forwards;
-}
-
-/* 13. MOBILE STYLES */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .main-content {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    /* Mobile Menu Activation */
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #222222;
-        padding: 15px;
-    }
-
-    nav li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
 }
 /* Events Page Styling */
 .events {
@@ -472,24 +391,6 @@ footer a:hover {
 .popup button:hover {
     background: #ff4444;
 }
-nav ul {
-    display: flex; /* Ensures horizontal layout */
-    justify-content: center; /* Centers items */
-    gap: 10px; /* Adds space between items */
-    list-style: none; /* Removes bullets */
-}
-
-nav ul li {
-    display: inline-block; /* Keeps items in a row */
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-}
-
 
 nav {
     width: 100%;
@@ -500,40 +401,64 @@ nav {
     box-sizing: border-box; /* Prevents overflow */
     overflow: hidden; /* Keeps elements inside */
 }
+nav {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
 
-nav ul {
+#menu-toggle {
+    display: none;
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#nav-links {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap if needed */
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-nav ul li a {
+#nav-links li a {
+    color: white;
+    text-decoration: none;
     font-size: 18px;
-    padding: 10px;
-    white-space: nowrap; /* Prevents breaking into new lines */
+    padding: 8px;
 }
 
+#nav-links li a:hover {
+    color: red;
+}
+
+/* Responsive Toggle Menu */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Stacks items instead of letting them overflow */
-        align-items: center;
+    #menu-toggle {
+        display: block;
     }
 
-    nav ul li {
-        width: 100%; /* Ensures they stay inside */
-        text-align: center;
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #111;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
     }
 
-    nav ul li a {
-        font-size: 16px;
+    #nav-links.show {
+        display: flex;
     }
-}
-nav ul {
-  list-style-type: none; !important;
-  padding: 0; !important;
-  margin: 0; !important;
 }
 
 
